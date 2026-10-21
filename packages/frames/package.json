@@ -43,15 +43,19 @@
     "motion": "10"
   },
   "dependencies": {
-    "@arwes/animated": "^1.0.0-next.25020502",
-    "@arwes/tools": "^1.0.0-next.25020502",
+    "@arwes/animated": "workspace:^",
+    "@arwes/tools": "workspace:^",
     "csstype": "3",
-    "tslib": "2"
+    "tslib": "2",
+    "@arwes/animator": "workspace:^"
   },
   "scripts": {
-    "build": "npm run build-esm && npm run build-cjs",
+    "build": "pnpm run build-esm && pnpm run build-cjs",
     "build-esm": "sh ../../scripts/pkg-build-esm.sh",
     "build-cjs": "sh ../../scripts/pkg-build-cjs.sh",
     "dev": "sh ../../scripts/pkg-build-esm.sh --watch"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.3"
   }
 }

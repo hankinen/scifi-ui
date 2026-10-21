@@ -109,25 +109,32 @@ specification._
 
 ## Workflow
 
-Using [Node.js](http://nodejs.org) v20.
+Using [Node.js](http://nodejs.org) v24.
 
 ### Setup
 
 Install and build all packages:
 
 ```bash
-npm install
-npm run build
+pnpm install
+pnpm build
 ```
 
 ### Applications
 
-Open an app in development mode:
+Start docs, playground, and performance apps together:
 
 ```bash
-npx turbo dev -F apps-docs
-npx turbo dev -F apps-play
-npx turbo dev -F apps-perf
+pnpm dev
+open http://localhost:3000
+```
+
+Or open a single app in development mode:
+
+```bash
+pnpm exec turbo dev -F apps-docs
+pnpm exec turbo dev -F apps-play
+pnpm exec turbo dev -F apps-perf
 ```
 
 ### Packages
@@ -135,7 +142,7 @@ npx turbo dev -F apps-perf
 Build and watch a package in development mode:
 
 ```bash
-npx turbo dev -F @arwes/animated
+pnpm exec turbo dev -F @arwes/animated
 # ...
 ```
 
@@ -144,7 +151,7 @@ npx turbo dev -F @arwes/animated
 Build production website at the `./www` folder and open it:
 
 ```bash
-npm run www
-npm run serve
+pnpm www
+pnpm serve
 open http://localhost:3000
 ```

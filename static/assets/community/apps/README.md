@@ -7,5 +7,5 @@ If your application is using ARWES and you wish to showcase it in the community:
 2. Optionally, add video in `webm` format with around 640x480 pixels at 60fps of
   minimum 3 seconds and maximum 10 seconds at `./media` folder.
 3. Add app data in [`./apps.json`](./apps.json) file.
-4. Run in terminal `npm run readme-community-generate`.
+4. Run in terminal `pnpm readme-community-generate`.
 5. Create PR.

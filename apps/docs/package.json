@@ -3,7 +3,7 @@
   "version": "1.0.0-next.25020502",
   "private": true,
   "dependencies": {
-    "@arwes/react": "^1.0.0-next.25020502",
+    "@arwes/react": "workspace:^",
     "@tailwindcss/typography": "^0.5.14",
     "autoprefixer": "^10.4.20",
     "iconoir-react": "^7.8.0",
@@ -12,7 +12,11 @@
     "postcss": "^8.4.41",
     "prism-react-renderer": "^2.3.1",
     "react-use": "^17.5.1",
-    "tailwindcss": "^3.4.9"
+    "tailwindcss": "^3.4.9",
+    "arwes": "workspace:^",
+    "motion": "^10.18.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "scripts": {
     "dev": "sh ./scripts/setup.sh && next dev -p 9002",

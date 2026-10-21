@@ -44,16 +44,16 @@
     "react": "18"
   },
   "dependencies": {
-    "@arwes/animated": "^1.0.0-next.25020502",
-    "@arwes/animator": "^1.0.0-next.25020502",
-    "@arwes/bleeps": "^1.0.0-next.25020502",
-    "@arwes/react-animator": "^1.0.0-next.25020502",
-    "@arwes/react-bleeps": "^1.0.0-next.25020502",
-    "@arwes/react-tools": "^1.0.0-next.25020502",
+    "@arwes/animated": "workspace:^",
+    "@arwes/animator": "workspace:^",
+    "@arwes/bleeps": "workspace:^",
+    "@arwes/react-animator": "workspace:^",
+    "@arwes/react-bleeps": "workspace:^",
+    "@arwes/react-tools": "workspace:^",
     "tslib": "2"
   },
   "scripts": {
-    "build": "npm run build-esm && npm run build-cjs",
+    "build": "pnpm run build-esm && pnpm run build-cjs",
     "build-esm": "sh ../../scripts/pkg-build-esm.sh",
     "build-cjs": "sh ../../scripts/pkg-build-cjs.sh",
     "dev": "sh ../../scripts/pkg-build-esm.sh --watch"

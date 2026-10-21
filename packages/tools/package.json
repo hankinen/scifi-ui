@@ -43,9 +43,12 @@
     "tslib": "2"
   },
   "scripts": {
-    "build": "npm run build-esm && npm run build-cjs",
+    "build": "pnpm run build-esm && pnpm run build-cjs",
     "build-esm": "sh ../../scripts/pkg-build-esm.sh",
     "build-cjs": "sh ../../scripts/pkg-build-cjs.sh",
     "dev": "sh ../../scripts/pkg-build-esm.sh --watch"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.3"
   }
 }
