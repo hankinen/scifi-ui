@@ -7,6 +7,10 @@ const REPOSITORY_PATH = path.join(__dirname, '../../')
 const SRC_PATH = path.join(__dirname, 'src')
 const BUILD_PATH = path.join(__dirname, 'build')
 const BASE_PATH = '/play/'
+const NOXTRON_UMD_PATH = path.join(
+  path.dirname(require.resolve('noxtron/package.json')),
+  'build/umd/'
+)
 
 const mode = process.env.NODE_ENV || 'development'
 const isProduction = mode === 'production'
@@ -76,7 +80,7 @@ module.exports = {
       new CopyWebpackPlugin({
         patterns: [
           {
-            from: path.join(REPOSITORY_PATH, 'node_modules/noxtron/build/umd/'),
+            from: NOXTRON_UMD_PATH,
             to: path.join(BUILD_PATH, BASE_PATH, 'noxtron/'),
             info: { minimized: true }
           }
@@ -91,7 +95,7 @@ module.exports = {
         watch: true
       },
       {
-        directory: path.join(REPOSITORY_PATH, 'node_modules/noxtron/build/umd/'),
+        directory: NOXTRON_UMD_PATH,
         publicPath: path.join(BASE_PATH, 'noxtron/'),
         watch: true
       },

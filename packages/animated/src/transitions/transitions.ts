@@ -1,4 +1,9 @@
-import type { EasingMotion, AnimatedSettings, AnimatedAnimation } from '../types.js'
+import type {
+  EasingMotion,
+  AnimatedSettings,
+  AnimatedAnimation,
+  AnimatedAnimationFunctionConfig
+} from '../types.js'
 import { easing } from '../easing/index.js'
 import { animateDraw } from '../animateDraw/index.js'
 
@@ -33,14 +38,14 @@ const flicker = (): AnimatedSettings => flickerTransition
 
 const draw = (durationCustom?: number | undefined, easing?: EasingMotion): AnimatedSettings => ({
   transitions: {
-    entering: ({ element, duration }) =>
+    entering: ({ element, duration }: AnimatedAnimationFunctionConfig) =>
       animateDraw({
         isEntering: true,
         element: element as SVGPathElement,
         duration: durationCustom ?? duration,
         easing
       }),
-    exiting: ({ element, duration }) =>
+    exiting: ({ element, duration }: AnimatedAnimationFunctionConfig) =>
       animateDraw({
         isEntering: false,
         element: element as SVGPathElement,

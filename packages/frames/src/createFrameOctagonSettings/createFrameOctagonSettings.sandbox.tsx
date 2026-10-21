@@ -28,7 +28,7 @@ root.innerHTML = `
   </style>
 `
 
-createFrame(root.querySelector('.frame1')!, {
+createFrame(root.querySelector('.frame1'), {
   animator,
   ...createFrameOctagonSettings({
     // styled: true,
@@ -43,7 +43,7 @@ createFrame(root.querySelector('.frame1')!, {
   })
 })
 
-createFrame(root.querySelector('.frame2')!, {
+createFrame(root.querySelector('.frame2'), {
   animator,
   ...createFrameOctagonSettings({
     padding: 10,
